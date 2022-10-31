@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Fetch Projects', type: :request do 
+RSpec.describe 'Find Project query', type: :request do 
   before(:each) do 
     @project0 = Project.create(
       name: 'Project 1',
@@ -17,22 +17,22 @@ RSpec.describe 'Fetch Projects', type: :request do
       hosts: ['AWS Amplify', 'Elastic Beanstalk']
     )
   end 
-  it "Fetches each project in the Database" do 
-    post "/graphql", params: { query: query_string }
-
+  it 'Fetches each project by Id' do 
+    post '/graphql', params: { query: query_string(@project0.id.to_s) }
     expect(response).to be_successful
     reply = JSON.parse(response.body, symbolize_names: true)
-    projects_data = reply[:data][:projects]
-    expect(projects_data.count).to eq(2)
+    project_data = reply[:data][:findProject]
+
+    expect(project_data[:description]).to eq(@project0.description)
+
   end 
-  def query_string 
+  def query_string(id)
     <<~GQL
       query{
-        projects{
-          name
+        findProject(id: "#{id}") {
+          name 
           description
-          url
-          frameworks
+          frameworks 
           hosts
         }
       }
