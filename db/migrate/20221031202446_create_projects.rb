@@ -5,8 +5,11 @@ class CreateProjects < ActiveRecord::Migration[7.0]
       t.string :url
       t.string :github
       t.string :description
+      t.string :classification
       t.string :frameworks, array: true, default: []
       t.string :hosts, array: true, default: []
+      t.string :apis, array: true, default: []
+      t.string :features, array: true, default: []
 
       t.timestamps
     end
