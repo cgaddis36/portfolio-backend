@@ -19,8 +19,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_31_202446) do
     t.string "url"
     t.string "github"
     t.string "description"
+    t.string "classification"
     t.string "frameworks", default: [], array: true
     t.string "hosts", default: [], array: true
+    t.string "apis", default: [], array: true
+    t.string "features", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
