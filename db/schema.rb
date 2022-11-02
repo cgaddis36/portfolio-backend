@@ -10,9 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_31_202446) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_02_210904) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "institutions", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "state"
+    t.string "degree"
+    t.string "major"
+    t.string "graduation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "title"
+    t.string "industry"
+    t.string "company"
+    t.string "summary"
+    t.string "start_date"
+    t.string "end_date"
+    t.string "city"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -26,6 +50,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_31_202446) do
     t.string "features", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "job_id"
+    t.index ["job_id"], name: "index_projects_on_job_id"
   end
 
+  add_foreign_key "projects", "jobs"
 end
