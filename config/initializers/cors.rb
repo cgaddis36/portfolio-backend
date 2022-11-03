@@ -12,7 +12,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     'http://192.168.0.208:3000',
     'https://192.168.0.208:3000',
     'http://chasegaddis.com',
-    'https://chasegaddis.com'
+    'https://chasegaddis.com',
+    'http://www.chasegaddis.com',
+    'https://www.chasegaddis.com'
 
 
     resource "*",
