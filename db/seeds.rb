@@ -168,9 +168,9 @@ project6 = Project.create(
 
 institution0 = Institution.create(
   name: 'University of Georgia',
-  degree: 'Bachelors',
+  degree: "Bachelor's Degree",
   major: 'Consumer Economics',
-  graduation: 'Fall 2017',
+  graduation: 'December 2017',
   city: 'Athens',
   state: 'GA'
 )
@@ -180,6 +180,6 @@ institution1 = Institution.create(
   degree: 'Technical Certificate',
   city: 'Denver',
   state: 'CO',
-  graduation: 'Winter 2020',
+  graduation: 'November 2020',
   major: 'Backend Engineering'
 )
