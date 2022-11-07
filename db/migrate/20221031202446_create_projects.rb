@@ -10,7 +10,8 @@ class CreateProjects < ActiveRecord::Migration[7.0]
       t.string :hosts, array: true, default: []
       t.string :apis, array: true, default: []
       t.string :features, array: true, default: []
-
+      t.string :languages, array: true, default: []
+      
       t.timestamps
     end
   end

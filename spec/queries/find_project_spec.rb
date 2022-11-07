@@ -5,16 +5,18 @@ RSpec.describe 'Find Project query', type: :request do
     @project0 = Project.create(
       name: 'Project 1',
       description: 'nice project',
-      frameworks: ['ruby on rails', 'react'],
+      frameworks: ['rails', 'react'],
       url: 'project1.example.com',
-      hosts: ['AWS Amplify', 'Elastic Beanstalk']
+      hosts: ['AWS Amplify', 'Elastic Beanstalk'],
+      languages: ['ruby', 'javascript']
     )
     @project1 = Project.create(
       name: 'Project 2',
       description: 'really great project',
-      frameworks: ['python flask', 'react'],
+      frameworks: ['flask', 'react'],
       url: 'project2.example.com',
-      hosts: ['AWS Amplify', 'Elastic Beanstalk']
+      hosts: ['AWS Amplify', 'Elastic Beanstalk'],
+      languages: ['python', 'javascript']
     )
   end 
   it 'Fetches each project by Id' do 

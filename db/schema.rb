@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_210904) do
     t.string "hosts", default: [], array: true
     t.string "apis", default: [], array: true
     t.string "features", default: [], array: true
+    t.string "languages", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "job_id"
