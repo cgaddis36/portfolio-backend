@@ -1,22 +1,12 @@
-job = Job.create(
-  title: 'Software Developer',
-  company: 'Self-employed',
-  industry: 'Technology',
-  start_date: '08/2021',
-  end_date: '11/2021',
-  city: 'Destin',
-  state: 'FL',
-  summary: 'Developed full stack applications focused on solving real world problems & refining my development skills to prepare for my next role on a development team.'
-)
 job0 = Job.create(
   title: "Full Stack Engineer",
   company: 'LeapEasy',
   industry: 'Property Management Insurance',
   start_date: '07/2021',
-  end_date: '07/2022',
+  end_date: '08/2022',
   city: 'Jersey City',
   state: 'NJ',
-  summary: 'Designed & developed 6 different insurance forms from ideation to production. Worked directly with c-suites. Remote role.'
+  summary: 'Designed & developed 6 different insurance forms from ideation to production linking the user engagement to Salesforce using custom built REST api. Remote role.'
 )
 
 job1 = Job.create(
@@ -27,7 +17,7 @@ job1 = Job.create(
   end_date: '08/2021',
   city: 'Destin',
   state: 'FL',
-  summary: 'Developed multiple web applications to gain experience showcasing development projects from ideation to production.'
+  summary: 'Developed an iOS application for recreational fishermen and boaters on AppleConnect, tested on Test Flight. Built separate application designed to help local charter boat captain book trips.' 
 )
 
 job2 = Job.create(
@@ -38,7 +28,7 @@ job2 = Job.create(
   end_date: '04/2021',
   city: 'Atlanta',
   state: 'GA',
-  summary: 'Designed & developed a backend a microservice to help Veterans locate medical services in their area. Also built an admin dashboard for this application. Remote role.'
+  summary: 'Designed & developed a backend microservice to help Veterans locate medical services in their area. Also built an admin dashboard for this application. Remote role.'
 )
 
 job3 = Job.create(
@@ -64,11 +54,11 @@ job4 = Job.create(
 )
 
 project0 = Project.create(
-  job_id: job.id, 
   name: 'ShoreCasts',
   classification: 'Personal Project',
   url: 'https://www.shorecasts.com',
   frameworks: ['Rails', 'GraphQL', 'React'],
+  languages: ['ruby', 'javascript', 'psql'],
   hosts: ['AWS Amplify', 'Elastic Beanstalk', 'RDS database'],
   description: 'Designed to centralize the location 
     for all of the necessary forecasting tools that recreational boaters 
@@ -92,6 +82,7 @@ project1 = Project.create(
   url: 'https://www.leapeasy.com/claim-form/',
   github: 'https://www.leapeasy.com/claim-form/',
   frameworks: ['Rails', 'GraphQL', 'React'],
+  languages: ['ruby', 'javascript', 'psql'],
   hosts: ['AWS Amplify', 'Elastic Beanstalk', 'RDS database'],
   description: 'Claims form designed to help landlords that work 
     with Leap file insurance claims on their policies.',
@@ -106,6 +97,7 @@ project2 = Project.create(
   github: 'https://github.com/cgaddis36/bluesman-charter',
   hosts: ['AWS Amplify'],
   frameworks: ['React'],
+  languages: ['javascript'],
   features: ['Informational Webpage', 
   'PWA scaled for mobile and web use'],
   description: 'Progressive web application designed to help a 
@@ -114,12 +106,13 @@ project2 = Project.create(
 
 project3 = Project.create(
   job_id: job2.id, 
-  name: 'Project Nexus',
+  name: 'Veterans to Doctors',
   classification: 'Work Project',
   url: 'https://promenade.ai',
   github: 'https://promendae.ai',
   hosts: ['Heroku'],
   frameworks: ['Rails', 'GraphQL', 'React'],
+  languages: ['ruby', 'javascript', 'psql'],
   apis: ['Constructed Api'],
   features: ['Admin Dashboard', 
   'Custom Location Finder', 
@@ -130,13 +123,13 @@ project3 = Project.create(
 )
 
 project4 = Project.create(
-  job_id: job.id, 
   name: 'Portfolio Site',
   classification: 'Personal Project',
   url: 'https://www.chasegaddis.com',
   github: 'https://github.com/cgaddis36/portfolio-site',
   hosts: ['AWS Amplify', 'AWS Elastic Beanstalk', 'RDS Database'],
   frameworks: ['Rails', 'GraphQL', 'React'],
+  languages: ['ruby', 'javascript', 'psql'],
   apis: ['Constructed Api'],
   features: ['Unique Database Construction'],
   description: 'Web application designed to showcase development projects.'
@@ -149,6 +142,7 @@ project5 = Project.create(
   github: 'https://github.com/GiftOfGab1',
   hosts: ['Heroku'],
   frameworks: ['Rails', 'GraphQL', 'Flask', 'React'],
+  languages: ['ruby', 'javascript', 'python', 'psql'],
   apis: ['Constructed Api', 'Text To Speech'],
   features: ['Text to Audio', 'Microservice', 'redux'],
   description: 'Progressive web application designed to facilitate speech for individuals with cognitive disabilities.'
@@ -161,6 +155,7 @@ project6 = Project.create(
   github: 'https://github.com/cgaddis36/local_spotlight',
   hosts: ['Heroku'],
   frameworks: ['Rails'],
+  languages: ['ruby', 'psql'],
   apis: ['Spotify'],
   features: ['Spotify Oauth', 'Geographical Location mapping'],
   description: 'Web application designed to locate local up and coming artists for you based on geographical location.'
