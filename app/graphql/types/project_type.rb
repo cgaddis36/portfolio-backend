@@ -12,6 +12,7 @@ module Types
     field :hosts, [String]
     field :apis, [String]
     field :features, [String]
+    field :languages, [String]
     field :job, Types::JobType
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
