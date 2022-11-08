@@ -6,7 +6,8 @@ job0 = Job.create(
   end_date: '08/2022',
   city: 'Jersey City',
   state: 'NJ',
-  summary: 'Designed & developed 6 different insurance forms from ideation to production linking the user engagement to Salesforce using custom built REST api. Remote role.'
+  summary: 'Designed & developed 6 different insurance forms from 
+  ideation to production linking the user engagement to Salesforce using custom built REST api. Remote role.'
 )
 
 job1 = Job.create(
@@ -17,7 +18,8 @@ job1 = Job.create(
   end_date: '08/2021',
   city: 'Destin',
   state: 'FL',
-  summary: 'Developed an iOS application for recreational fishermen and boaters on AppleConnect, tested on Test Flight. Built separate application designed to help local charter boat captain book trips.' 
+  summary: 'Developed an iOS application for recreational fishermen and 
+  boaters on AppleConnect, tested on Test Flight. Built separate application designed to help local charter boat captain book trips.' 
 )
 
 job2 = Job.create(
@@ -28,7 +30,8 @@ job2 = Job.create(
   end_date: '04/2021',
   city: 'Atlanta',
   state: 'GA',
-  summary: 'Designed & developed a backend microservice to help Veterans locate medical services in their area. Also built an admin dashboard for this application. Remote role.'
+  summary: 'Designed & developed a backend microservice to help Veterans 
+  locate medical services in their area. Also built an admin dashboard for this application. Remote role.'
 )
 
 job3 = Job.create(
@@ -36,7 +39,8 @@ job3 = Job.create(
   company: 'Chadwell Supply Co',
   city: 'Dallas',
   state: 'TX',
-  summary: 'Managed portfolio of 120 Apartment complexes. In person sales role selling maintenance supplies in East Dallas. History of achieving 6-figure sales metrics.',
+  summary: 'Managed portfolio of 120 Apartment complexes. In person sales 
+  role selling maintenance supplies in East Dallas. History of achieving 6-figure sales metrics.',
   industry: 'Property Management',
   start_date: '01/2019',
   end_date: '06/2019'
