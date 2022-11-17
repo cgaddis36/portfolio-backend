@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Institution, type: :model do
+  it { should belong_to :developer }
   it { should validate_presence_of :name }
   it { should validate_presence_of :city }
   it { should validate_presence_of :state }

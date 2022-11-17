@@ -5,4 +5,5 @@ class Institution < ApplicationRecord
   validates_presence_of :degree
   validates_presence_of :major
   validates_presence_of :graduation
+  belongs_to :developer
 end

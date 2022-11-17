@@ -7,7 +7,8 @@ class CreateInstitutions < ActiveRecord::Migration[7.0]
       t.string :degree
       t.string :major
       t.string :graduation
-
+      t.string :logo 
+      
       t.timestamps
     end
   end
