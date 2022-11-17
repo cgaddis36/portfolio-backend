@@ -6,4 +6,5 @@ class Project < ApplicationRecord
   validates_presence_of :languages 
   
   belongs_to :job, optional: true
+  belongs_to :developer
 end

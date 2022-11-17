@@ -10,9 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_02_210904) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_17_152636) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "developers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "background"
+    t.string "github"
+    t.string "title"
+    t.string "email"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hobbies", force: :cascade do |t|
+    t.bigint "developer_id", null: false
+    t.string "name"
+    t.string "image"
+    t.string "video"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["developer_id"], name: "index_hobbies_on_developer_id"
+  end
 
   create_table "institutions", force: :cascade do |t|
     t.string "name"
@@ -21,8 +43,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_210904) do
     t.string "degree"
     t.string "major"
     t.string "graduation"
+    t.string "logo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "developer_id", null: false
+    t.index ["developer_id"], name: "index_institutions_on_developer_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -36,6 +61,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_210904) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "developer_id", null: false
+    t.index ["developer_id"], name: "index_jobs_on_developer_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -52,8 +79,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_210904) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "job_id"
+    t.bigint "developer_id", null: false
+    t.index ["developer_id"], name: "index_projects_on_developer_id"
     t.index ["job_id"], name: "index_projects_on_job_id"
   end
 
+  add_foreign_key "hobbies", "developers"
+  add_foreign_key "institutions", "developers"
+  add_foreign_key "jobs", "developers"
+  add_foreign_key "projects", "developers"
   add_foreign_key "projects", "jobs"
 end

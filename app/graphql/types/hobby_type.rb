@@ -1,15 +1,12 @@
 # frozen_string_literal: true
 
 module Types
-  class InstitutionType < Types::BaseObject
+  class HobbyType < Types::BaseObject
     field :id, ID, null: false
+    field :developer_id, Integer, null: false
     field :name, String
-    field :city, String
-    field :state, String
-    field :degree, String
-    field :major, String
-    field :graduation, String
-    field :logo, String
+    field :image, String
+    field :video, String
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
