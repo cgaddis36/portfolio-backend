@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_17_152636) do
     t.string "logo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "developer_id", null: false
+    t.bigint "developer_id"
     t.index ["developer_id"], name: "index_institutions_on_developer_id"
   end
 
@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_17_152636) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "developer_id", null: false
+    t.bigint "developer_id"
     t.index ["developer_id"], name: "index_jobs_on_developer_id"
   end
 
@@ -79,7 +79,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_17_152636) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "job_id"
-    t.bigint "developer_id", null: false
+    t.bigint "developer_id"
     t.index ["developer_id"], name: "index_projects_on_developer_id"
     t.index ["job_id"], name: "index_projects_on_job_id"
   end
