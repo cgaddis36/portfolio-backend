@@ -1,7 +1,57 @@
+developer = Developer.create(
+  first_name: "Chase", 
+  last_name: "Gaddis",
+  email: "cgaddis36@gmail.com",
+  phone: "(850)582-2223",
+  github: "https://github.com/cgaddis36",
+  title: "Software Developer",
+  background: "My main goal as a developer is to build highly personable applications designed to optimize efficiency and create solutions to real world problems.
+  Innovation is what drives me in every project I build. Whether it be developing new services for a startup to help Veterans navigate post military life 
+  or bringing my own ideas to life, creating new products to solve business problems and provide widespread accessibility to arbitrary data is what greases
+  my gears as a developer. When I am not coding, you can find me throwing the ball with my labrador retriever Lilly in one of the local parks or fishing for 
+  speckled sea trout & redfish from a kayak. I would be hard pressed to find a better day than hiking to a mountain stream and fly fishing all day."
+)
+
+hobby0 = Hobby.create(
+  developer_id: developer.id,
+  name: "Fly Fishing",
+  image: "https://flyfish-photo.s3.amazonaws.com/fly.png",
+  video: "https://fishing-video.s3.amazonaws.com/beachFlyFish.mp4"
+)
+
+hobby1 = Hobby.create(
+  developer_id: developer.id,
+  name: "Hiking",
+  image: "https://hike-photo.s3.amazonaws.com/hike.png",
+  video: "https://hiking-video.s3.amazonaws.com/hiking.mp4"
+)
+
+hobby2 = Hobby.create(
+  developer_id: developer.id,
+  name: "Skiing",
+  image: "https://ski-photo.s3.amazonaws.com/skiChris.png",
+  video: "https://skiing-video.s3.amazonaws.com/1+(1).mp4"
+)
+
+hobby3 = Hobby.create(
+  developer_id: developer.id,
+  name: "Diving",
+  image: "https://beach-sunset.s3.amazonaws.com/beachSunset.png",
+  video: "https://diving-video.s3.amazonaws.com/diving.mp4"
+)
+
+hobby4 = Hobby.create(
+  developer_id: developer.id,
+  name: "Biking",
+  image: "https://beach-bike.s3.amazonaws.com/beachBikes.png",
+  video: "https://biking-video.s3.amazonaws.com/biking.mp4"
+)
+
 job0 = Job.create(
+  developer_id: developer.id,
   title: "Full Stack Engineer",
   company: 'LeapEasy',
-  industry: 'Property Management Insurance',
+  industry: 'InsurTech',
   start_date: '07/2021',
   end_date: '08/2022',
   city: 'Jersey City',
@@ -11,6 +61,7 @@ job0 = Job.create(
 )
 
 job1 = Job.create(
+  developer_id: developer.id,
   title: 'Freelance Software Developer',
   company: 'Self-Employed',
   industry: 'Technology',
@@ -23,6 +74,7 @@ job1 = Job.create(
 )
 
 job2 = Job.create(
+  developer_id: developer.id,
   title: 'Backend Engineer',
   company: 'Promenade.ai',
   industry: 'Social Media',
@@ -35,6 +87,7 @@ job2 = Job.create(
 )
 
 job3 = Job.create(
+  developer_id: developer.id,
   title: 'Territory Sales Manager',
   company: 'Chadwell Supply Co',
   city: 'Dallas',
@@ -47,6 +100,7 @@ job3 = Job.create(
 )
 
 job4 = Job.create(
+  developer_id: developer.id,
   title: 'Business Development Representative',
   company: 'RealPage',
   city: 'Dallas',
@@ -58,6 +112,7 @@ job4 = Job.create(
 )
 
 project0 = Project.create(
+  developer_id: developer.id,
   name: 'ShoreCasts',
   classification: 'Personal Project',
   url: 'https://www.shorecasts.com',
@@ -80,6 +135,7 @@ project0 = Project.create(
   apis: ['NOAA Tides & Currents', 'National Weather Service', 'Custom API built designed for Fishing Stores & Guides']
 )
 project1 = Project.create(
+  developer_id: developer.id,
   job_id: job0.id, 
   name: 'Leap Claims Form',
   classification: 'Work Project',
@@ -94,6 +150,7 @@ project1 = Project.create(
   features: ['Google Places Autocomplete', 'Salesforce Automation', 'Salesforce Record Mutations']
 )
 project2 = Project.create(
+  developer_id: developer.id,
   job_id: job1.id, 
   name: 'Bluesman Charters',
   classification: 'Personal Project',
@@ -109,6 +166,7 @@ project2 = Project.create(
 )
 
 project3 = Project.create(
+  developer_id: developer.id,
   job_id: job2.id, 
   name: 'Veterans to Doctors',
   classification: 'Work Project',
@@ -127,6 +185,7 @@ project3 = Project.create(
 )
 
 project4 = Project.create(
+  developer_id: developer.id,
   name: 'Portfolio Site',
   classification: 'Personal Project',
   url: 'https://www.chasegaddis.com',
@@ -140,6 +199,7 @@ project4 = Project.create(
 )
 
 project5 = Project.create(
+  developer_id: developer.id,
   name: 'Gift of Gab',
   classification: 'School Project',
   url: 'https://gift-of-gab-deployed.herokuapp.com/',
@@ -153,6 +213,7 @@ project5 = Project.create(
 )
 
 project6 = Project.create(
+  developer_id: developer.id,
   name: 'Local Spotlight',
   classification: 'School Project',
   url: 'https://polar-caverns-76159.herokuapp.com/',
@@ -166,19 +227,23 @@ project6 = Project.create(
 )
 
 institution0 = Institution.create(
+  developer_id: developer.id,
   name: 'University of Georgia',
   degree: "Bachelor's Degree",
   major: 'Consumer Economics',
   graduation: 'December 2017',
   city: 'Athens',
-  state: 'GA'
+  state: 'GA',
+  logo: 'https://uga-logo.s3.amazonaws.com/ugaLogo.jpeg'
 )
 
 institution1 = Institution.create(
+  developer_id: developer.id,
   name: 'Turing School of Software & Design',
   degree: 'Technical Certificate',
   city: 'Denver',
   state: 'CO',
   graduation: 'November 2020',
-  major: 'Backend Engineering'
+  major: 'Backend Engineering',
+  logo: 'https://turing-logo.s3.amazonaws.com/turingLogo.png'
 )
