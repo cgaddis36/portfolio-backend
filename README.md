@@ -1,9 +1,36 @@
-# Rails 7 AWS Elastic Beanstalk Deploy Guidelines
+# Portfolio Backend 
+Live Api Url: https://portfolio.chasegaddis.com
+Frontend Url: https://chasegaddis.com
+## Dependencies 
+- Rails 7.0.4
+- ruby 3.0.4
+- graphql
 
-## Step 1
-- Check current ruby platforms that AWS is accepting for new builds
-## Step 2
-- Set your rbenv or rvm to use the most current version of ruby that AWS is accepting, currently this is 3.0.4 
-run `rbenv local 3.0.4`
+## Testing Suite 
+- RSpec
+
+## Setup
+- clone repo from github
+- Replace seeds in seeds.rb with your personal background information to feed to the Frontend portfolio site
+- go to puma.rb and comment out lines 26, 28 & 35
+- in your terminal run the next string of commands: 
+- go to cors.rb and modify the allowed incoming servers to reflect your ip address
+- `bundle install`
+- `rails db:{create,migrate,seed}`
+- `rspec`
+- `rails s -p 4000`
+These steps will setup your rails application with the necessary dependencies, create and migrate your database as well as start your server. The next steps will be to connect your Frontend portfolio site to the backend and replace your seeds with mine.
+
+### Setup your React Frontend Application
+- https://github.com/cgaddis36/portfolio-site
+- After you setup your frontend application and replace the url on the FindDeveloper.js file to reflect the url that your portfolio api is now hosted on. If you followed above steps, you will need to send requests to: `http://localhost:4000/graphql`
+
+
+## Deployed AWS
+- RDS Database
+- EC2 instance
+- Route 53 Domain Management
+- Elastic Beanstalk
+
 
 
