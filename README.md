@@ -22,6 +22,7 @@ Frontend Url: https://chasegaddis.com
 These steps will setup your rails application with the necessary dependencies, create and migrate your database as well as start your server. The next steps will be to connect your Frontend portfolio site to the backend and replace your seeds with mine.
 
 ### Setup your React Frontend Application
+##Follow the steps on the repo linked below.
 - https://github.com/cgaddis36/portfolio-site
 - After you setup your frontend application and replace the url on the FindDeveloper.js file to reflect the url that your portfolio api is now hosted on. If you followed above steps, you will need to send requests to: `http://localhost:4000/graphql`
 
