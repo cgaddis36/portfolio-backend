@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.4"
+ruby "3.0.5"
 
 gem "rails", "~> 7.0.4"
 gem "pg", "~> 1.1"
-gem "puma", "= 6.0.0"
+gem "puma", "= 6.0.1"
 gem "graphql"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "rack-cors"
