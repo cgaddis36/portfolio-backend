@@ -16,7 +16,7 @@ Frontend Url: https://chasegaddis.com
 - `bundle install`
 - `rails db:{create,migrate,seed}`
 - `rspec`
-- `rails s -p 4000`
+- `rails s -p 4000` </br>
 These steps will setup your rails application with the necessary dependencies, create and migrate your database as well as start your server. The next steps will be to connect your Frontend portfolio site to the backend and replace your seeds with mine.
 - go to cors.rb and modify the allowed incoming servers to reflect your ip address
 - Replace seeds in seeds.rb with your personal background information to feed to the Frontend portfolio site
